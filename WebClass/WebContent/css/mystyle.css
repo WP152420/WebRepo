@@ -1,0 +1,67 @@
+@CHARSET "utf-8";
+
+#cd1h1 {
+	font-size: 50px;
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 70px;
+}
+
+#cd1h2 {
+	margin-top: -300px;
+	padding-bottom: 70px;
+	font-size: 50px;
+	text-align: center;
+}
+
+#cd1he {
+	margin-top: -300px;
+	font-size: 50px;
+	text-align: center;
+}
+
+.comfort {
+	color: #ff00ff;
+	text-decoration: none !important;
+}
+
+.card-text {
+	font-weight: bold;
+}
+
+.guitar {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	font-size: 50px;
+	text-align: center;
+}
+
+.guitar2 {
+	padding-top: 100px;
+	padding-bottom: 70px;
+	font-size: 50px;
+	text-align: center
+}
+
+.guitar3 {
+	padding-right: 100px;
+	padding-left: 100px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: lighter;
+}
+
+.violin {
+	color: red;
+	font-style: italic;
+}
+
+#end {
+	font-size: 50px;
+	text-align: center;
+}
+
+.g6 {
+	width: 100%;
+	height: 100%;
+}

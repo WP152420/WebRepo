@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap 실습</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+	crossorigin="anonymous">
+<script>
+	function menu_over(e) {
+		e.setAttribute("class", "nav-item active");
+	}
+	function menu_out(e) {
+		e.setAttribute("class", "nav-item");
+	}
+</script>
+<style>
+div.container {
+	padding-top: 30px;
+}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item" onmouseover="menu_over(this)"
+					onmouseout="menu_out(this)"><a class="nav-link" href="a.html">메뉴1
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item" onmouseover="menu_over(this)"
+					onmouseout="menu_out(this)"><a class="nav-link" href="p.html">메뉴2</a></li>
+				<li class="nav-item" onmouseover="menu_over(this)"
+					onmouseout="menu_out(this)"><a class="nav-link"
+					href="dom.html">메뉴3</a></li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0" id="loginForm">
+				<input class="form-control mr-sm-2" type="text" placeholder="ID"
+					aria-label="ID" id="id" size="15" required> <input
+					class="form-control mr-sm-2" type="password" placeholder="PASSWORD"
+					aria-label="PASSWORD" id="pwd" size="15" required>
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">login</button>
+			</form>
+		</div>
+	</nav>
+	<div class="container">
+		<h1>Hello, Bootstrap!</h1>
+		<p>커다란 피가 그들의 바이며, 위하여, 가지에 그들은 것이다. 뭇 심장은 사랑의 있을 심장의 인간이 전인 원대하고,
+			커다란 말이다. 찾아 인간의 보는 반짝이는 있는 보이는 것은 것이다. 지혜는 싶이 꽃 이상을 수 가치를 미인을 인생을
+			것이다. 타오르고 넣는 앞이 착목한는 불어 때에, 이상, 아니한 듣는다. 그들은 보내는 영원히 그것을 끓는다. 석가는 이
+			천하를 눈에 목숨이 부패뿐이다. 트고, 모래뿐일 피고, 인간에 같으며, 남는 힘있다. 것은 풀이 청춘 장식하는 그리하였는가?
+			갑 가는 목숨이 반짝이는 이것을 속잎나고, 지혜는 보라. 인류의 위하여, 위하여서, 뛰노는 황금시대의 힘차게 꽃 얼음에 이상
+			교향악이다. 피에 있는 것은 방황하여도, 열락의 바로 교향악이다. 그들의 이상 원대하고, 열락의 있는가? 대중을 무엇을 꽃
+			그들의 품고 장식하는 그들의 이상 뿐이다. 작고 이상이 청춘은 따뜻한 것이다. 물방아 피에 희망의 청춘은 힘차게 품에
+			칼이다. 이것을 그림자는 온갖 위하여서 심장은 무한한 같지 보이는 것이다. 눈에 곧 이것은 너의 넣는 아니다. 원대하고,
+			따뜻한 만천하의 설레는 그러므로 튼튼하며, 그러므로 있음으로써 이 있으랴? 얼음 뭇 뜨고, 봄날의 것이다. 얼마나 위하여서
+			더운지라 찾아다녀도, 할지니, 이것이다. 끓는 행복스럽고 곳으로 대고, 때문이다. 청춘 낙원을 날카로우나 때까지 군영과
+			있는가? 구하지 있을 같은 열매를 가슴이 속에 때에, 돋고, 힘있다. 불어 위하여, 있으며, 거선의 같은 뛰노는 사랑의
+			것이다. 때에, 곧 얼음에 온갖 미인을 것이 대고, 하는 같이, 이것이다. 관현악이며, 뼈 하였으며, 이 너의 운다. 오직
+			별과 소리다.이것은 이상은 것이다. 크고 날카로우나 그림자는 수 끝에 봄바람이다. 영원히 할지라도 커다란 그들은 행복스럽고
+			꽃이 위하여, 있는 주는 철환하였는가?</p>
+	</div>
+
+	<!-- 모달 창 -->
+	<div class="modal" id="myModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">로그인 결과</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+		integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+		integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+		crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(
+				function() {
+					$("#loginForm").submit(
+							function(event) {
+								// submit되는 것을 막기
+								event.preventDefault();
+								console.log('start');
+								// id, pwd 값 가져오기
+								var id = $("#id").val(); // document.getElementByid("id").value
+								var pwd = $("#pwd").val();
+								console.log(id, pwd);
+
+								// 서버로 post 방식 전송 (ajax)
+								$.post("/WebClass/login", {
+									"id" : id,
+									"pwd" : pwd
+								}, function(data) {
+									// 서버로부터 응답을 받으면
+									//alert(data.form.id + '님 로그인되었습니다.');
+									var myModal = $('#myModal');
+									myModal.modal();
+									myModal.find('.modal-body').text(
+											data.id + '님 로그인되었습니다.');
+								})
+							});
+				});
+
+		// 간단히
+		$(function() {
+
+		})
+	</script>
+</body>
+</html>
