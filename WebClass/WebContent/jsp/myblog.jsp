@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="org.dimigo.vo.UserVO"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +25,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
 <script src="../js/myjs.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+
 </head>
 <body>
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -46,7 +50,12 @@
 					onmouseout="menu_out(this)"><a class="nav-link"
 					href="cowdog3.html">나</a></li>
 			</ul>
+
 			<div id="ppap">
+				<%
+					UserVO user = (UserVO) session.getAttribute("user");
+					if (user == null) {
+				%>
 				<form class="form-inline my-2 my-lg-0" id="loginForm">
 					<input class="form-control mr-sm-2" type="text" placeholder="ID"
 						aria-label="ID" id="id" size="15" required> <input
@@ -57,9 +66,22 @@
 					<button class="btn btn-outline-success my-2 my-sm-0"
 						onclick="pop('join.html',370,200);">join</button>
 				</form>
+				<%
+					} else {
+				%>
+				<div style="color: white; display: inline-block"><%=user.getId()%>님
+				</div>
+				<form action="/WebClass/bloglogout" method="post"
+					style="display: inline-block" id="logoutForm">
+					<button type="submit" class="btn btn-outline-success my-2 my-sm-0">로그아웃</button>
+				</form>
+				<%
+					}
+				%>
 			</div>
 
 		</div>
+
 	</nav>
 	<section class="jumbotron text-center">
 		<div class="container">
@@ -133,10 +155,21 @@
 					"id" : id,
 					"pwd" : pwd
 				}, function(data) {
-					var myModal = $('#myModal');
-					myModal.modal();
-					myModal.find('.modal-body').text(data.id + '로그인 되었습니다.');
-				})
+					if (data.msg == 'success') {
+						location.href = "myblog.jsp";
+
+					} else {
+						var myModal = $('#myModal');
+						myModal.modal();
+						myModal.find('.modal-body').text('로그인에 실패하였습니다.');
+					}
+				});
+			});
+			$("#logoutForm").submit(function(event) {
+				event.preventDefault();
+				$.post("/WebClass/bloglogout", {}, function(data) {
+					location.href = "myblog.jsp";
+				});
 			});
 		});
 	</script>
