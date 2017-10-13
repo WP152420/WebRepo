@@ -60,7 +60,7 @@
 					<input class="form-control mr-sm-2" type="text" placeholder="ID"
 						aria-label="ID" id="id" size="15" required> <input
 						class="form-control mr-sm-2" type="password"
-						placeholder="PASSWORD" aria-label="PASSWORD" id="pwd" size="15"
+						placeholder="PASSWORD" aria-label="PASSWORD" id="pwd" size="15" value=""
 						required>
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">login</button>
 					<button class="btn btn-outline-success my-2 my-sm-0"
