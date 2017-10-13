@@ -162,7 +162,7 @@
 						var myModal = $('#myModal');
 						myModal.modal();
 						myModal.find('.modal-body').text('로그인에 실패하였습니다.');
-						pwd = "";
+						$('#pwd').val('');
 					}
 				});
 			});
