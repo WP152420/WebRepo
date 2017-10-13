@@ -60,7 +60,7 @@
 					<input class="form-control mr-sm-2" type="text" placeholder="ID"
 						aria-label="ID" id="id" size="15" required> <input
 						class="form-control mr-sm-2" type="password"
-						placeholder="PASSWORD" aria-label="PASSWORD" id="pwd" size="15" value=""
+						placeholder="PASSWORD" aria-label="PASSWORD" id="pwd" size="15"
 						required>
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">login</button>
 					<button class="btn btn-outline-success my-2 my-sm-0"
@@ -162,6 +162,7 @@
 						var myModal = $('#myModal');
 						myModal.modal();
 						myModal.find('.modal-body').text('로그인에 실패하였습니다.');
+						pwd = "";
 					}
 				});
 			});
