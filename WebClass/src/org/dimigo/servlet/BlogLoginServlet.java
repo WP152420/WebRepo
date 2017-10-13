@@ -47,6 +47,7 @@ public class BlogLoginServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
+		String name="이유진";
 		System.out.printf("id : %s pwd : %s\n", id, pwd);
 		boolean result ="test@naver.com".equals(id);
 		response.setContentType("application/json;charset=utf-8");
@@ -59,6 +60,7 @@ public class BlogLoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			UserVO user = new UserVO();
 			user.setId(id);
+			user.setName(name);
 			session.setAttribute("user", user);
 			json.addProperty("msg", "success");
 		} else {

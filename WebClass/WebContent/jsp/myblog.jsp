@@ -69,7 +69,7 @@
 				<%
 					} else {
 				%>
-				<div style="color: white; display: inline-block"><%=user.getId()%>님
+				<div style="color: white; display: inline-block"><%=user.getName()%>님
 				</div>
 				<form action="/WebClass/bloglogout" method="post"
 					style="display: inline-block" id="logoutForm">
